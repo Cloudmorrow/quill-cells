@@ -18,7 +18,7 @@ def q():
         yield harness
 
 
-IN_DOCUMENTS = {"share": "my-files", "within": "Documents", "suffix": ".cell"}
+IN_DOCUMENTS = {"share": "my-files", "within": "Documents", "suffix": ".cell,.xlsx"}
 
 
 def test_everybody_gets_a_first_sheet_once(q):

@@ -1,14 +1,15 @@
 # Cells: small spreadsheets. A sheet is a .cell file in the Documents
 # folder of your drive — a plain text file holding its cells exactly as
 # typed, formulas and all, in My Files, on WebDAV, and open to anything
-# that reads JSON. The grid, the formula bar and the arithmetic are
+# that reads JSON — and an Excel file in that folder is a sheet too, read
+# and written as Excel. The grid, the formula bar and the arithmetic are
 # Cloudmorrow's sheet kit, drawn on every surface (docs/CELLS.md in the
 # Cloudmorrow repository); nothing here is code.
 
 [quill]
 id = "cells"
 name = "Cells"
-version = "2.1.0"
+version = "2.2.0"
 summary = "Small spreadsheets: cells, numbers and formulas, worked out the same on the phone, the web, the terminal and the command line."
 category = "productivity"
 icon = "grid"
@@ -22,9 +23,12 @@ features = [
   "Borders: a side, all around, or every cell, from the buttons over the formula bar — kept in the file beside the cells",
   "Put rows and columns in or take them out from a heading's menu; the formulas follow, as Excel's do",
   "A sheet is a .cell file in the Documents folder of your drive: its cells kept exactly as typed, in My Files, on WebDAV, and open to your assistant and anything that reads JSON",
+  "An Excel file (.xlsx) in that folder is a sheet too: opened, edited and saved back as Excel",
+  "Export hands any sheet over to save as Excel, as a PDF, or as CSV",
+  "Open a sheet from anywhere on your cloud: another folder of your drive, a fileshare, an Excel file somebody put there",
   "Saves as you type; a sheet changed somewhere else is never written over",
   "A first sheet, a small budget, for everyone the first time they open Cells",
-  "cm cells show Budget, get Budget B5, set Budget B5 \"=SUM(B1:B3)\" from the command line",
+  "cm cells show Budget, get Budget B5, set Budget B5 \"=SUM(B1:B3)\", export Budget ./Budget.xlsx from the command line",
 ]
 
 # A sheet is a file. Cells uses the file datamodel and nothing of its own.
@@ -34,14 +38,15 @@ datamodels = ["file"]
 # One tab: the sheets, newest first, and the one open as a grid with the
 # formula bar over it. On a computer and in the terminal they are side by
 # side; on a phone the list comes first and the grid after it. The sheets
-# are the .cell files under Documents in your own drive.
+# are the .cell files under Documents in your own drive, and Excel's .xlsx
+# files there, which the server reads and writes as the same text.
 [[screens]]
 id = "sheets"
 kit = "sheet"
 label = "Cells"
 model = "file"
 where = { share = "my-files", within = "Documents" }
-suffix = ".cell"
+suffix = [".cell", ".xlsx"]
 title = "name"
 cells = "text"
 path = "path"
@@ -52,5 +57,5 @@ path = "path"
 id = "welcome"
 model = "file"
 seed = "per-owner"
-where = { share = "my-files", within = "Documents", suffix = ".cell" }
+where = { share = "my-files", within = "Documents", suffix = ".cell,.xlsx" }
 file = "datasets/welcome.toml"

@@ -18,6 +18,14 @@ terminal and the command line.
   assistant, and to anything that reads JSON. Cells is the kit's sheet
   over those files and nothing more. Removing this Quill takes the tab
   away, never a sheet.
+- An Excel file (`.xlsx`) in that folder is a sheet too: it opens here,
+  and is saved back as Excel. What the kit keeps — the cells, the formulas,
+  the borders — goes to and from Excel; fonts, colours and charts do not.
+- **Export** hands any sheet to you as Excel, as a PDF, or as CSV.
+  **Open** opens a sheet from anywhere on your cloud — another folder of
+  your drive, a fileshare, an Excel file somebody put there — and it stays
+  where it is. `cm cells export Budget ./Budget.xlsx` and
+  `cm cells show my-files:Reports/Q3.xlsx` do the same from the command line.
 - It saves as you type. A sheet changed somewhere else since you opened it
   is never written over.
 
@@ -26,7 +34,7 @@ The file, the formulas, and what each surface does, are
 in the Cloudmorrow repository.
 
 Install it from the Quill Catalog, or from this repository with
-`cm quill add --source https://github.com/Cloudmorrow/quill-cells --ref v2.0.0`.
+`cm quill add --source https://github.com/Cloudmorrow/quill-cells --ref v2.2.0`.
 
 ## What it adds to your Cloudmorrow
 
