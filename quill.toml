@@ -8,7 +8,7 @@
 [quill]
 id = "cells"
 name = "Cells"
-version = "2.0.0"
+version = "2.1.0"
 summary = "Small spreadsheets: cells, numbers and formulas, worked out the same on the phone, the web, the terminal and the command line."
 category = "productivity"
 icon = "grid"
@@ -18,6 +18,9 @@ features = [
   "Sheets of cells: type text, a number, or a formula starting with =",
   "Excel's formulas, the useful ones: cells and ranges, + - * / ^ &, comparisons, SUM, AVERAGE, MIN, MAX, COUNT, COUNTIF, SUMIF, IF, AND, OR, ROUND, ABS, MOD, SQRT, LEN, CONCAT, UPPER, LOWER, TRIM, IFERROR, …",
   "What a formula comes to is worked out as you type, by the same rules on every surface; errors show in the cell as #DIV/0!, #REF!, #NAME?, #VALUE!, #CIRC!",
+  "Select a block of cells with the mouse or Shift, a whole row or column from its heading, and clear it with Delete",
+  "Borders: a side, all around, or every cell, from the buttons over the formula bar — kept in the file beside the cells",
+  "Put rows and columns in or take them out from a heading's menu; the formulas follow, as Excel's do",
   "A sheet is a .cell file in the Documents folder of your drive: its cells kept exactly as typed, in My Files, on WebDAV, and open to your assistant and anything that reads JSON",
   "Saves as you type; a sheet changed somewhere else is never written over",
   "A first sheet, a small budget, for everyone the first time they open Cells",
