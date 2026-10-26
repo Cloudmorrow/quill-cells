@@ -1,15 +1,16 @@
-# Cells: small spreadsheets. A sheet is a record of the foundational
-# `sheet` datamodel — a name, and its cells: what was typed in each, by the
-# cell's name, formulas and all. The grid, the formula bar and the
-# arithmetic are Cloudmorrow's sheet kit, drawn on every surface
-# (docs/CELLS.md in the Cloudmorrow repository); nothing here is code.
+# Cells: small spreadsheets. A sheet is a .cell file in the Documents
+# folder of your drive — a plain text file holding its cells exactly as
+# typed, formulas and all, in My Files, on WebDAV, and open to anything
+# that reads JSON. The grid, the formula bar and the arithmetic are
+# Cloudmorrow's sheet kit, drawn on every surface (docs/CELLS.md in the
+# Cloudmorrow repository); nothing here is code.
 
 [quill]
 id = "cells"
 name = "Cells"
-version = "1.0.0"
+version = "2.0.0"
 summary = "Small spreadsheets: cells, numbers and formulas, worked out the same on the phone, the web, the terminal and the command line."
-category = "business"
+category = "productivity"
 icon = "grid"
 publisher = "Cloudmorrow"
 license = "AGPL-3.0-or-later"
@@ -17,31 +18,36 @@ features = [
   "Sheets of cells: type text, a number, or a formula starting with =",
   "Excel's formulas, the useful ones: cells and ranges, + - * / ^ &, comparisons, SUM, AVERAGE, MIN, MAX, COUNT, COUNTIF, SUMIF, IF, AND, OR, ROUND, ABS, MOD, SQRT, LEN, CONCAT, UPPER, LOWER, TRIM, IFERROR, …",
   "What a formula comes to is worked out as you type, by the same rules on every surface; errors show in the cell as #DIV/0!, #REF!, #NAME?, #VALUE!, #CIRC!",
-  "A sheet is a record: its cells are kept exactly as typed, in one field, open to any other Quill and to your assistant",
+  "A sheet is a .cell file in the Documents folder of your drive: its cells kept exactly as typed, in My Files, on WebDAV, and open to your assistant and anything that reads JSON",
   "Saves as you type; a sheet changed somewhere else is never written over",
   "A first sheet, a small budget, for everyone the first time they open Cells",
   "cm cells show Budget, get Budget B5, set Budget B5 \"=SUM(B1:B3)\" from the command line",
 ]
 
-# A sheet is foundational: name, cells, notes. Cells adds nothing of its own.
+# A sheet is a file. Cells uses the file datamodel and nothing of its own.
 [uses]
-datamodels = ["sheet"]
+datamodels = ["file"]
 
 # One tab: the sheets, newest first, and the one open as a grid with the
 # formula bar over it. On a computer and in the terminal they are side by
-# side; on a phone the list comes first and the grid after it.
+# side; on a phone the list comes first and the grid after it. The sheets
+# are the .cell files under Documents in your own drive.
 [[screens]]
 id = "sheets"
 kit = "sheet"
 label = "Cells"
-model = "sheet"
+model = "file"
+where = { share = "my-files", within = "Documents" }
+suffix = ".cell"
 title = "name"
-cells = "cells"
+cells = "text"
+path = "path"
 
 # The first time somebody opens Cells and has no sheet, a small budget
 # with a formula at the bottom, to see how it goes.
 [[datasets]]
 id = "welcome"
-model = "sheet"
+model = "file"
 seed = "per-owner"
+where = { share = "my-files", within = "Documents", suffix = ".cell" }
 file = "datasets/welcome.toml"
