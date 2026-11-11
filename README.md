@@ -22,10 +22,11 @@ terminal and the command line.
   and is saved back as Excel. What the kit keeps — the cells, the formulas,
   the borders — goes to and from Excel; fonts, colours and charts do not.
 - **Export** hands any sheet to you as Excel, as a PDF, or as CSV.
-  **Open** opens a sheet from anywhere on your cloud — another folder of
-  your drive, a fileshare, an Excel file somebody put there — and it stays
-  where it is. `cm cells export Budget ./Budget.xlsx` and
+  `cm cells export Budget ./Budget.xlsx` and
   `cm cells show my-files:Reports/Q3.xlsx` do the same from the command line.
+- Under **Folders** the first row is the drive Cells looks at: tap it to
+  look at a fileshare instead — an Excel file somebody put there opens the
+  same way, and stays where it is — and again to come home to My Files.
 - It saves as you type. A sheet changed somewhere else since you opened it
   is never written over.
 
