@@ -9,7 +9,7 @@
 [quill]
 id = "cells"
 name = "Cells"
-version = "2.2.0"
+version = "2.2.1"
 summary = "Small spreadsheets: cells, numbers and formulas, worked out the same on the phone, the web, the terminal and the command line."
 category = "productivity"
 icon = "grid"
@@ -25,7 +25,7 @@ features = [
   "A sheet is a .cell file in the Documents folder of your drive: its cells kept exactly as typed, in My Files, on WebDAV, and open to your assistant and anything that reads JSON",
   "An Excel file (.xlsx) in that folder is a sheet too: opened, edited and saved back as Excel",
   "Export hands any sheet over to save as Excel, as a PDF, or as CSV",
-  "Open a sheet from anywhere on your cloud: another folder of your drive, a fileshare, an Excel file somebody put there",
+  "Under Folders, the drive Cells looks at: My Files, or any fileshare you are in, an Excel file somebody put there opening the same way",
   "Saves as you type; a sheet changed somewhere else is never written over",
   "A first sheet, a small budget, for everyone the first time they open Cells",
   "cm cells show Budget, get Budget B5, set Budget B5 \"=SUM(B1:B3)\", export Budget ./Budget.xlsx from the command line",
