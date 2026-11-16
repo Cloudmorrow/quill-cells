@@ -27,6 +27,10 @@ terminal and the command line.
 - Under **Folders** the first row is the drive Cells looks at: tap it to
   look at a fileshare instead — an Excel file somebody put there opens the
   same way, and stays where it is — and again to come home to My Files.
+- Every row of the list has a menu — right-click it on a computer, hold a
+  finger on it on a phone: Rename, Duplicate, Move to another folder, Open
+  folder in Files, Delete — and **Select** beside the pen picks several to
+  move or delete at once.
 - It saves as you type. A sheet changed somewhere else since you opened it
   is never written over.
 
