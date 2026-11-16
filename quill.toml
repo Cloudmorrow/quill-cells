@@ -9,7 +9,7 @@
 [quill]
 id = "cells"
 name = "Cells"
-version = "2.2.1"
+version = "2.2.2"
 summary = "Small spreadsheets: cells, numbers and formulas, worked out the same on the phone, the web, the terminal and the command line."
 category = "productivity"
 icon = "grid"
